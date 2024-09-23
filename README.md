@@ -21,9 +21,26 @@ The lecture slides on F1TENTH Follow the gap is the best visual resource for und
 
 ### IV. Implementation
 
-Implement a gap follow algorithm to make the car drive autonomously around the Levine Hall map. You can implement this node in either C++ or Python. There are two extra test maps `levine_blocked.png`, which is empty, and `levine_obs.png`, which has obstacles that are relatively hard to navigate through for you to evaluate your code on.
+Implement a gap follow algorithm to make the car drive autonomously around the Levine Hall map. You can implement this node in either C++ or Python. In the simulator, the vehicle will be tested
+in two maps provided in the gap_follow node: `levine_blocked.png`, which is empty, and `levine_obs.png`, which has obstacles that are relatively hard to navigate through for you to evaluate your code on.
+
+```bash
+1 gordon@f1sim:~/ws/gym-one/f1tenth_gym_ros/maps$ ls
+2 levine_blocked.png levine_obs.png levine.png Spielberg_map.png
+3 levine_blocked.yaml levine_obs.yaml levine.yaml Spielberg_map.yaml
+```
 
 To change the map in the simulation, add the included `.png` and `.yaml` map files to `f1tenth_gym_ros/maps` directory. Then, change `f1tenth_gym_ros/config/sim.yaml` to use your desired map.
+
+```bash
+1 gordon@f1sim:~/ws/gym-one/f1tenth_gym_ros/config$ emacs -nw sim.yaml # edit the sim.yaml file 
+2 >>> SNIP <<<
+3 # map parameters
+4 map_path: ’/sim_ws/src/f1tenth_gym_ros/maps/levine_obs’
+5 map_img_ext: ’.png’
+6 >>> SNIP <<<
+```
+**After any changes to the sim.yaml file, the docker will need to be restarted, re-entered and rebuilt.**
 
 ### V. Deliverables and Submission
 
