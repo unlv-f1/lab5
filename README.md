@@ -46,10 +46,20 @@ To change the map in the simulation, add the included `.png` and `.yaml` map fil
 
 **Deliverable 1**: After you're finished, update the entire skeleton package directory with your `gap_follow` package and directly commit and push to a repo shared with your TA. Your commited code should start and run in simulation smoothly.
 
+**Shared Demonstration Requirements**:
+The parameters to the follow the gap algorithm must be accepted as command line arguments. There may be default values provided by the launch file, but they must be able to be overridden on the command line. The purpose of this requirement is to allow students the opportunity to adjust their implementations for the track conditions. This Lab affords students flexibility in their method of gap following, which may require a distinct set of parameters per implementation. Include a help option to your launch file that will display the command line options and their meaning and then stops the system.
+
+```# Breanna please include an example invocation, you do not need to implement this just a text sample such as:
+# ros2 launch follow_gap.py --help
+  bubble:=#   the size of the safety bubble in meters
+  maxvel:=#   the maximum velocity of the vehicle in meters/sec
+```
+
 **Simulator Demonstration**:
 A satisfactory demonstration includes the following:
 - The vehicle autonomously drives a lap around the track without collision.
 - The vehicle can successfully maneuver around obstacles on the track.
+- A launch command that includes all parameters of the given obstacle avoidance algorithm
 
 In presentation of the simulator, start your gap_follow node in an adjacent terminal to the simulator
 preview. Have the node output a message to terminal indicating that the node has successfully been started.
@@ -61,12 +71,12 @@ Provide terminal output for the successful launching of the node and no more.*
 to complete the following tasks:
 - The vehicle autonomously drives a lap around the track without collision.
 - The vehicle can successfully make its way around obstacles on the track.
+- A launch command that includes all parameters of the given obstacle avoidance algorithm
 
 Depending on implementations, changes may need to be made to account for differences present on
 vehicle that do not exist in simulation. An example might be a difference in the radius of the physical
 vehicle, which is about 6 inches in length.
 
-<!--Dr.Tessler, is this the race? I don't believe we have other on vehicle demo days for this lab.-->
 
 
 ### VI. Grading Rubric
