@@ -1,4 +1,4 @@
-# Lab 4: Follow the Gap
+# Lab 5: Follow the Gap
 
 ## I. Learning Goals
 
